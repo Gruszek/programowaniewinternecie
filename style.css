@@ -51,7 +51,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     height: 80vh;
-    background-image: url('https://example.com/nba-bg.jpg');
+    background-image: url('images/nba-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
