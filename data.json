@@ -1,0 +1,48 @@
+{
+    "teams": [
+        {
+            "name": "Los Angeles Lakers",
+            "logo": "https://example.com/lakers-logo.png",
+            "description": "The Los Angeles Lakers are an American professional basketball team based in Los Angeles."
+        },
+        {
+            "name": "Golden State Warriors",
+            "logo": "https://example.com/warriors-logo.png",
+            "description": "The Golden State Warriors are an American professional basketball team based in San Francisco."
+        },
+        {
+            "name": "Brooklyn Nets",
+            "logo": "https://example.com/nets-logo.png",
+            "description": "The Brooklyn Nets are an American professional basketball team based in the New York City borough of Brooklyn."
+        }
+    ],
+    "players": [
+        {
+            "name": "LeBron James",
+            "photo": "https://example.com/lebron-photo.png",
+            "team": "Los Angeles Lakers"
+        },
+        {
+            "name": "Stephen Curry",
+            "photo": "https://example.com/curry-photo.png",
+            "team": "Golden State Warriors"
+        },
+        {
+            "name": "Kevin Durant",
+            "photo": "https://example.com/durant-photo.png",
+            "team": "Brooklyn Nets"
+        }
+    ],
+    "news": [
+        {
+            "title": "NBA Finals 2024",
+            "image": "https://example.com/nba-finals.png",
+            "content": "The NBA Finals 2024 will feature the best teams competing for the championship title."
+        },
+        {
+            "title": "MVP Race 2024",
+            "image": "https://example.com/mvp-race.png",
+            "content": "The MVP race for 2024 is heating up with several top contenders."
+        }
+    ]
+}
