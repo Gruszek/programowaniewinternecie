@@ -50,7 +50,7 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
     background-image: url('images/nba-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -143,4 +143,32 @@ footer {
 
 .social-media a:hover img {
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+    
+    .intro p {
+        font-size: 1rem;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .social-media a img {
+        width: 40px;
+    }
 }
