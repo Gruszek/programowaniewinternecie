@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayNews(news) {
         news.forEach(article => {
             const newsCard = document.createElement('div');
-            newsCard.classList.add('card');
+            newsCard.classList.add('card', 'news-card');
             newsCard.innerHTML = `
                 <img src="images/${article.image}" alt="${article.title}">
                 <div class="card-content">
