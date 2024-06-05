@@ -112,6 +112,18 @@ nav ul li a:hover {
     box-shadow: 0 8px 12px rgba(0,0,0,0.2);
 }
 
+.about-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 footer {
     background-color: #1a1a1a;
     color: white;
@@ -170,5 +182,24 @@ footer {
     
     .social-media a img {
         width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 2rem;
+    }
+    
+    .intro p {
+        font-size: 0.9rem;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .social-media a img {
+        width: 35px;
     }
 }
