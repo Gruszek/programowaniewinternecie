@@ -80,4 +80,15 @@ document.addEventListener('DOMContentLoaded', function() {
         teamsContainer.appendChild(teamCard);
     });
 
-   
+    const playersContainer = document.getElementById('players-container');
+    playersData.forEach(player => {
+        const playerCard = createCard(player, 'player');
+        playersContainer.appendChild(playerCard);
+    });
+
+    const newsContainer = document.getElementById('news-container');
+    newsData.forEach(news => {
+        const newsCard = createCard(news, 'news');
+        newsContainer.appendChild(newsCard);
+    });
+});
