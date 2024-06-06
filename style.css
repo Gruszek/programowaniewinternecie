@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; /* Zapobiega przewijaniu w bok */
+    scroll-behavior: smooth;
 }
 
 header {
@@ -12,6 +12,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 nav ul {
@@ -29,11 +34,12 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #ff4500;
+    transform: scale(1.1);
 }
 
 .logo img {
@@ -42,8 +48,14 @@ nav ul li a:hover {
 }
 
 .section {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.section.visible {
+    opacity: 1;
 }
 
 .intro {
@@ -51,7 +63,7 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
     background-image: url('images/nba-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -113,6 +125,12 @@ nav ul li a:hover {
     box-shadow: 0 8px 12px rgba(0,0,0,0.2);
 }
 
+.about-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
 footer {
     background-color: #1a1a1a;
     color: white;
@@ -138,7 +156,7 @@ footer {
 
 .social-media a img {
     width: 30px;
-    height: auto;
+    height: 30px;
     transition: transform 0.3s ease;
 }
 
@@ -146,9 +164,36 @@ footer {
     transform: scale(1.1);
 }
 
-.about-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    z-index: 1000;
+}
+
+.cookie-consent p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.cookie-consent button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cookie-consent button:hover {
+    background-color: #e63900;
 }
