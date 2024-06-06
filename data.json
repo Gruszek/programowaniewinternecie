@@ -2,46 +2,46 @@
     "teams": [
         {
             "name": "Los Angeles Lakers",
-            "logo": "lakers-logo.png",
+            "logo": "images/lakers-logo.png",
             "description": "The Los Angeles Lakers are an American professional basketball team based in Los Angeles."
         },
         {
             "name": "Golden State Warriors",
-            "logo": "warriors-logo.png",
+            "logo": "images/warriors-logo.png",
             "description": "The Golden State Warriors are an American professional basketball team based in San Francisco."
         },
         {
             "name": "Brooklyn Nets",
-            "logo": "nets-logo.png",
+            "logo": "images/nets-logo.png",
             "description": "The Brooklyn Nets are an American professional basketball team based in the New York City borough of Brooklyn."
         }
     ],
     "players": [
         {
             "name": "LeBron James",
-            "photo": "lebron-photo.png",
+            "photo": "images/lebron-photo.png",
             "team": "Los Angeles Lakers"
         },
         {
             "name": "Stephen Curry",
-            "photo": "curry-photo.png",
+            "photo": "images/curry-photo.png",
             "team": "Golden State Warriors"
         },
         {
             "name": "Kyrie Irving",
-            "photo": "irving-photo.png",
+            "photo": "images/durant-photo.png",
             "team": "Dallas Mavericks"
         }
     ],
     "news": [
         {
             "title": "NBA Finals 2024",
-            "image": "nba-finals.png",
+            "image": "images/nba-finals.png",
             "content": "The NBA Finals 2024 will feature the best teams competing for the championship title."
         },
         {
             "title": "MVP Race 2024",
-            "image": "mvp-race.png",
+            "image": "images/mvp-race.png",
             "content": "The MVP race for 2024 is heating up with several top contenders."
         }
     ]
