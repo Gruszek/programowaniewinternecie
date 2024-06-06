@@ -114,13 +114,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
             }
-
             card.innerHTML = content;
             container.appendChild(card);
         });
     };
 
-    // Render all cards
     renderCards('teams-container', data.teams, 'teams');
     renderCards('players-container', data.players, 'players');
     renderCards('news-container', data.news, 'news');
