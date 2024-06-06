@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA OnePage</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -32,41 +32,20 @@
         </section>
         <section id="teams" class="section">
             <h2>Teams</h2>
-            <div id="teams-container" class="card-container swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Slides will be dynamically added here -->
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+            <div id="teams-container" class="card-container"></div>
         </section>
         <section id="players" class="section">
             <h2>Players</h2>
-            <div id="players-container" class="card-container swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Slides will be dynamically added here -->
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+            <div id="players-container" class="card-container"></div>
         </section>
         <section id="news" class="section">
             <h2>Latest News</h2>
-            <div id="news-container" class="card-container swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Slides will be dynamically added here -->
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+            <div id="news-container" class="card-container"></div>
         </section>
         <section id="about" class="section">
             <h2>About NBA</h2>
             <p>The National Basketball Association (NBA) is a professional basketball league in North America composed of 30 teams. It is one of the major professional sports leagues in the United States and Canada.</p>
-            <img src="images/nba-court.jpg" alt="NBA Court">
+            <img src="images/nba-court.jpg" alt="NBA Court" class="about-image">
         </section>
     </main>
     <footer>
@@ -80,10 +59,8 @@
         </div>
     </footer>
     <div class="cookie-consent">
-        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <p>We use cookies to ensure you get the best experience on our website. <a href="#">Learn more</a></p>
         <button id="accept-cookies">Accept</button>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
