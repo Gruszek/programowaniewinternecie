@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA OnePage</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script defer src="script.js"></script>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="https://example.com/nba-logo.png" alt="NBA Logo">
+        </div>
         <nav>
-            <div class="logo">
-                <img src="images/nba-logo.png" alt="NBA Logo">
-            </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#teams">Teams</a></li>
@@ -32,31 +34,44 @@
         </section>
         <section id="teams" class="section">
             <h2>Teams</h2>
-            <div id="teams-container" class="card-container"></div>
+            <div id="teams-container" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides will be dynamically added here -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
         <section id="players" class="section">
             <h2>Players</h2>
-            <div id="players-container" class="card-container"></div>
+            <div id="players-container" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides will be dynamically added here -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
         <section id="news" class="section">
             <h2>Latest News</h2>
-            <div id="news-container" class="card-container"></div>
+            <div id="news-container" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides will be dynamically added here -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
         <section id="about" class="section">
             <h2>About NBA</h2>
             <p>The National Basketball Association (NBA) is a professional basketball league in North America composed of 30 teams. It is one of the major professional sports leagues in the United States and Canada.</p>
-            <div class="about-image-container">
-                <img src="images/nba-court.jpg" alt="NBA Court">
-            </div>
+            <img src="https://example.com/nba-court.jpg" alt="NBA Court">
         </section>
     </main>
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 NBA OnePage. All rights reserved.</p>
             <div class="social-media">
-                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="https://example.com/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="https://example.com/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="https://example.com/instagram-icon.png" alt="Instagram"></a>
             </div>
         </div>
     </footer>
