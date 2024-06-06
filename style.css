@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 header {
@@ -16,7 +15,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -28,18 +27,34 @@ nav ul {
 
 nav ul li {
     margin: 0 1rem;
+    position: relative;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff4500;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 nav ul li a:hover {
     color: #ff4500;
-    transform: scale(1.1);
 }
 
 .logo img {
@@ -48,14 +63,21 @@ nav ul li a:hover {
 }
 
 .section {
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
-    transition: opacity 0.6s ease-in-out;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .section.visible {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .intro {
@@ -125,12 +147,6 @@ nav ul li a:hover {
     box-shadow: 0 8px 12px rgba(0,0,0,0.2);
 }
 
-.about-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
-
 footer {
     background-color: #1a1a1a;
     color: white;
@@ -156,7 +172,7 @@ footer {
 
 .social-media a img {
     width: 30px;
-    height: 30px;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
@@ -164,24 +180,33 @@ footer {
     transform: scale(1.1);
 }
 
+.about-image {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
 .cookie-consent {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 1rem;
-    border-radius: 8px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    max-width: 300px;
-    z-index: 1000;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cookie-consent p {
     margin: 0;
-    font-size: 0.9rem;
+}
+
+.cookie-consent a {
+    color: #ff4500;
+    text-decoration: underline;
 }
 
 .cookie-consent button {
@@ -189,8 +214,8 @@ footer {
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
