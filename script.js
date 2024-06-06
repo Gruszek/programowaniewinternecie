@@ -81,45 +81,48 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
 
-    // Function to render cards
-    const renderCards = (containerId, items, type) => {
-        const container = document.getElementById(containerId);
-        items.forEach(item => {
-            const card = document.createElement('div');
-            card.className = 'card';
+    // Populate Teams Section
+    const teamsContainer = document.getElementById('teams-container');
+    data.teams.forEach(team => {
+        const teamCard = `
+            <div class="card">
+                <img src="${team.logo}" alt="${team.name}">
+                <div class="card-content">
+                    <h3>${team.name}</h3>
+                    <p>${team.description}</p>
+                </div>
+            </div>
+        `;
+        teamsContainer.innerHTML += teamCard;
+    });
 
-            let content;
-            if (type === 'teams') {
-                content = `
-                    <img src="${item.logo}" alt="${item.name} Logo">
-                    <div class="card-content">
-                        <h3>${item.name}</h3>
-                        <p>${item.description}</p>
-                    </div>
-                `;
-            } else if (type === 'players') {
-                content = `
-                    <img src="${item.photo}" alt="${item.name}">
-                    <div class="card-content">
-                        <h3>${item.name}</h3>
-                        <p>Team: ${item.team}</p>
-                    </div>
-                `;
-            } else if (type === 'news') {
-                content = `
-                    <img src="${item.image}" alt="${item.title}">
-                    <div class="card-content">
-                        <h3>${item.title}</h3>
-                        <p>${item.content}</p>
-                    </div>
-                `;
-            }
-            card.innerHTML = content;
-            container.appendChild(card);
-        });
-    };
+    // Populate Players Section
+    const playersContainer = document.getElementById('players-container');
+    data.players.forEach(player => {
+        const playerCard = `
+            <div class="card">
+                <img src="${player.photo}" alt="${player.name}">
+                <div class="card-content">
+                    <h3>${player.name}</h3>
+                    <p>Team: ${player.team}</p>
+                </div>
+            </div>
+        `;
+        playersContainer.innerHTML += playerCard;
+    });
 
-    renderCards('teams-container', data.teams, 'teams');
-    renderCards('players-container', data.players, 'players');
-    renderCards('news-container', data.news, 'news');
+    // Populate News Section
+    const newsContainer = document.getElementById('news-container');
+    data.news.forEach(article => {
+        const newsCard = `
+            <div class="card">
+                <img src="${article.image}" alt="${article.title}">
+                <div class="card-content">
+                    <h3>${article.title}</h3>
+                    <p>${article.content}</p>
+                </div>
+            </div>
+        `;
+        newsContainer.innerHTML += newsCard;
+    });
 });
