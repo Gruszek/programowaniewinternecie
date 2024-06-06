@@ -3,30 +3,25 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
 }
 
 header {
-    position: fixed;
-    height: 100%;
-    width: 250px;
     background-color: #1a1a1a;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1rem 2rem;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    margin: 0;
     padding: 0;
-    margin: 2rem 0 0;
-    width: 100%;
-    text-align: center;
 }
 
 nav ul li {
-    margin: 1rem 0;
+    margin: 0 1rem;
 }
 
 nav ul li a {
@@ -41,14 +36,8 @@ nav ul li a:hover {
 }
 
 .logo img {
-    width: 100px;
+    width: 50px;
     height: auto;
-}
-
-main {
-    margin-left: 250px;
-    padding: 2rem;
-    flex-grow: 1;
 }
 
 .section {
@@ -62,7 +51,7 @@ main {
     align-items: center;
     justify-content: center;
     height: 80vh;
-    background-image: url('https://example.com/nba-bg.jpg');
+    background-image: url('images/nba-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -92,26 +81,21 @@ main {
     background-color: #e63900;
 }
 
-.swiper-container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.swiper-slide {
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     overflow: hidden;
+    width: 300px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.swiper-slide:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -119,14 +103,20 @@ main {
     height: auto;
 }
 
+.card-content {
+    padding: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
 footer {
     background-color: #1a1a1a;
     color: white;
     text-align: center;
     padding: 2rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 .footer-content {
