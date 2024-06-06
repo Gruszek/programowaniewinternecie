@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    function createCard(item, type) {
+    function createCard(item) {
         const card = document.createElement('div');
         card.className = 'card';
         
@@ -80,26 +80,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const teamsContainer = document.getElementById('teams-container');
     teamsData.forEach(team => {
-        teamsContainer.appendChild(createCard(team, 'team'));
+        teamsContainer.appendChild(createCard(team));
     });
 
     const playersContainer = document.getElementById('players-container');
     playersData.forEach(player => {
-        playersContainer.appendChild(createCard(player, 'player'));
+        playersContainer.appendChild(createCard(player));
     });
 
     const newsContainer = document.getElementById('news-container');
     newsData.forEach(news => {
-        newsContainer.appendChild(createCard(news, 'news'));
+        newsContainer.appendChild(createCard(news));
     });
 
     // Lazy loading and scroll reveal effect
     const sections = document.querySelectorAll('.section');
+    const cards = document.querySelectorAll('.card');
+
     const options = {
         threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const sectionObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
@@ -109,7 +111,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }, options);
 
     sections.forEach(section => {
-        observer.observe(section);
+        sectionObserver.observe(section);
+    });
+
+    const cardObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, options);
+
+    cards.forEach(card => {
+        cardObserver.observe(card);
     });
 
     // Cookie consent handling
