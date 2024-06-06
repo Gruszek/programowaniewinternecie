@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
             team: "Golden State Warriors"
         },
         {
-            name: "Kevin Durant",
-            photo: "images/durant-photo.png",
-            team: "Brooklyn Nets"
+            name: "Kyrie Irving",
+            photo: "images/irving-photo.png",
+            team: "Dallas Mavericks"
         }
     ];
 
