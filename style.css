@@ -1,11 +1,17 @@
+/* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: justify;
 }
 
+/* Header styles */
 header {
     background-color: #1a1a1a;
     display: flex;
@@ -16,7 +22,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -47,6 +53,7 @@ nav ul li a:hover {
     height: auto;
 }
 
+/* Section styles */
 .section {
     padding: 6rem 2rem;
     text-align: center;
@@ -68,7 +75,7 @@ nav ul li a:hover {
     background-size: cover;
     background-position: center;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .intro h1 {
@@ -94,6 +101,7 @@ nav ul li a:hover {
     background-color: #e63900;
 }
 
+/* Card container styles */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -101,19 +109,21 @@ nav ul li a:hover {
     gap: 2rem;
 }
 
+/* Card styles */
 .card {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    width: 350px;  /* Powiększono */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 350px; /* Powiększono */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 250px; /* Powiększono */
+    object-fit: cover;
 }
 
 .card-content {
@@ -122,15 +132,17 @@ nav ul li a:hover {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* About section image */
 .about-image {
     width: 100%;
-    max-width: 100%;  /* Rozciągnięcie obrazu */
+    max-width: 100%; /* Rozciągnięcie obrazu */
     height: auto;
 }
 
+/* Footer styles */
 footer {
     background-color: #1a1a1a;
     color: white;
@@ -164,6 +176,7 @@ footer {
     transform: scale(1.1);
 }
 
+/* Cookie consent styles */
 .cookie-consent {
     position: fixed;
     bottom: 20px;
