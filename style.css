@@ -3,10 +3,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 header {
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 26, 0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,14 +59,15 @@ nav ul li a:hover {
 }
 
 .logo img {
-    width: 50px;
+    width: 300px;
     height: auto;
+    opacity: 0.2;
 }
 
 .section {
-    padding: 4rem 2rem;
+    padding: 1rem 2rem;
     text-align: center;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,15 +200,11 @@ footer {
     align-items: center;
     padding: 1rem 2rem;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    display: none; /* Ukrycie komunikatu na początku */
 }
 
 .cookie-consent p {
     margin: 0;
-}
-
-.cookie-consent a {
-    color: #ff4500;
-    text-decoration: underline;
 }
 
 .cookie-consent button {
