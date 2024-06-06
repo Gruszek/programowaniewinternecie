@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             name: "Kyrie Irving",
-            photo: "images/durant-photo.png",
+            photo: "images/irving-photo.png",
             team: "Dallas Mavericks"
         }
     ];
@@ -39,56 +39,91 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "NBA Finals 2024",
             image: "images/nba-finals.png",
-            content: "The NBA Finals 2024 will feature the best teams competing for the championship title."
+            content: "The NBA Finals 2024 are set to be an epic showdown between the top teams."
         },
         {
-            title: "MVP Race 2024",
+            title: "MVP Race",
             image: "images/mvp-race.png",
-            content: "The MVP race for 2024 is heating up with several top contenders."
+            content: "The race for the MVP title this season is tighter than ever with several top contenders."
+        },
+        {
+            title: "Rookie Watch",
+            image: "images/rookie-watch.png",
+            content: "Keep an eye on these rookies who are making a big impact in their debut season."
         }
     ];
 
     function createCard(item, type) {
         const card = document.createElement('div');
         card.className = 'card';
-
+        
         const img = document.createElement('img');
         img.src = item.logo || item.photo || item.image;
         img.alt = item.name || item.title;
-
+        
         const cardContent = document.createElement('div');
         cardContent.className = 'card-content';
 
         const title = document.createElement('h3');
         title.textContent = item.name || item.title;
-
+        
         const description = document.createElement('p');
         description.textContent = item.description || item.team || item.content;
-
+        
         cardContent.appendChild(title);
         cardContent.appendChild(description);
-
         card.appendChild(img);
         card.appendChild(cardContent);
-
+        
         return card;
     }
 
     const teamsContainer = document.getElementById('teams-container');
     teamsData.forEach(team => {
-        const teamCard = createCard(team, 'team');
-        teamsContainer.appendChild(teamCard);
+        teamsContainer.appendChild(createCard(team, 'team'));
     });
 
     const playersContainer = document.getElementById('players-container');
     playersData.forEach(player => {
-        const playerCard = createCard(player, 'player');
-        playersContainer.appendChild(playerCard);
+        playersContainer.appendChild(createCard(player, 'player'));
     });
 
     const newsContainer = document.getElementById('news-container');
     newsData.forEach(news => {
-        const newsCard = createCard(news, 'news');
-        newsContainer.appendChild(newsCard);
+        newsContainer.appendChild(createCard(news, 'news'));
     });
+
+    // Lazy loading and scroll reveal effect
+    const sections = document.querySelectorAll('.section');
+    const options = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Cookie consent handling
+    const cookieConsent = document.querySelector('.cookie-consent');
+    const acceptCookiesButton = document.getElementById('accept-cookies');
+
+    acceptCookiesButton.addEventListener('click', () => {
+        cookieConsent.style.display = 'none';
+        localStorage.setItem('cookiesAccepted', 'true');
+    });
+
+    if (!localStorage.getItem('cookiesAccepted')) {
+        cookieConsent.style.display = 'flex';
+    } else {
+        cookieConsent.style.display = 'none';
+    }
 });
